@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
+import IdCard from './components/IdCard'
+import LikeButton from './components/LikeButton'
+
+import { ListItems } from './components/ListItems'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>IdCard</h1>
-        {/* TODO: Use the IdCard component */}
-
-        <h1>Greetings</h1>
-        {/* TODO: Use the Greetings component */}
+        <ListItems></ListItems>
       </div>
     );
   }
