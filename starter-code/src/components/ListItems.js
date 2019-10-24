@@ -21,13 +21,16 @@ class ListItems extends Component {
 
   render() {
 
-    let component = this.state.loggedIn ? <Profile></Profile> : <LoginForm></LoginForm>
-
     return (
       <ul>
-        {this.state.movies.map((oneMovie, index) =>
-          // NOTE deleteClick passes down a function as a property !
-          <MovieCard key={index} deleteClick={() => this.deleteClickHandler(index)} title={oneMovie.title} director={oneMovie.director} />)
+        {this.state.movies.map((oneMovie, index) => {
+          return <MovieCard
+            key={index}
+            // NOTE deleteClick passes down a function as a property !
+            deleteClick={() => this.deleteClickHandler(index)}
+            title={oneMovie.title}
+            director={oneMovie.director} />
+        })
         }
 
         {this.state.sayHello && 'Hello'}
